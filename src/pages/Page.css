@@ -1,0 +1,26 @@
+.my-page{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    width: auto;
+    border-radius: 5px;
+    
+    
+}
+
+.card{
+    /* background-color: black; */
+    padding: 15px;
+    width: 350px;
+    height: 350px;
+}
+
+.card-image{
+    height: 200px;
+    width: 250px;
+    border-radius: 5px;
+
+}
+
+
+
