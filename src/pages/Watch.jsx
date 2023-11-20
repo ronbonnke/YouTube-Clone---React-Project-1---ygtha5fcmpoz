@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react';
 import { Container, Flex, Button } from "@chakra-ui/react";
 import { MdPlaylistAdd, MdPlaylistAddCheck } from "react-icons/md";
+import { BiLike } from "react-icons/bi";
 function Watch() {
   const [isAdded, setIsAdded] = useState(false);
     const { id } = useParams();
@@ -61,14 +62,29 @@ function Watch() {
       }
 
   return (
-    <div>
+    <div style={{marginLeft:"0%", width:"100%"}}>
        {itemId.video_url ? (
-            <Flex marginTop="1rem" marginLeft="80px" >
+        <>
+        
+            <Flex marginTop="1rem" marginLeft="10px" >
               <video ref={videoRef} width="65%" height="100%"  controls>
                 <source src={itemId.video_url} type="video/mp4" />
               </video>
 
             </Flex>
+            <div style={{display:"flex", width:"65%", marginLeft:"10px"}}>
+              <div className='left'>
+
+            <h1 style={{paddingTop:"20px"}}>
+              {itemId.title}</h1>
+              </div>
+              <div className='right' style={{paddingTop:"20px", marginRight:"0px"}}>
+              <BiLike />
+              </div>
+
+            </div>
+              <h4 style={{marginLeft:"10px", paddingTop:"10px", width:"65%"}}>{itemId.description}</h4>
+        </>
           ) : (
             <p>Loading...</p>
           )}

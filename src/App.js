@@ -26,38 +26,30 @@ function App() {
       <Header/>
       <Sidebar />
           
-      <div className="main-display" 
-      // style={{"display" : "flex"}}
-      >
-        <Routes>
-          <Route path='/' element={<>
-          {/* <Sidebar /> */}
-          <Videos />
-          </>} />
-          <Route path="/watch/:id" element={<Watch />} />
-          <Route path='newpage' element={<Page/>} />
-          <Route path='/login' element={<LoginSignup/>} />
-          <Route path='/register' element={<Register/>} />
-          <Route path="/result/:id" element={<SearchResult />} />
-          {/* <Route path="/searchlist" element={<Searchlist/>}/> */}
-          <Route path='/premium'
-          element={<Premium />}/>
-          
-          <Route path='/premiumsub'
-          element={<PremiumSub />}/>
-          
-          <Route path='/comingsoon'
-          element={<ComingSoon />}/>
-
-          <Route path='/password'
-          element={<Password />}/>
-         
-          <Route path='/watchlist'
-          element={<Watchlist />}/>
-          
-        </Routes>
-      
-      </div>
+      <div className="main-display">
+          <div className="container">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Videos />
+                  </>
+                }
+              />
+              <Route path="/watch/:id" element={<Watch />} />
+              <Route path="/newpage" element={<Page />} />
+              <Route path="/login" element={<LoginSignup />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/result/:id" element={<SearchResult />} />
+              <Route path="/premium" element={<Premium />} />
+              <Route path="/premiumsub" element={<PremiumSub />} />
+              <Route path="/comingsoon" element={<ComingSoon />} />
+              <Route path="/password" element={<Password />} />
+              <Route path="/watchlist" element={<Watchlist />} />
+            </Routes>
+          </div>
+        </div>
       </BrowserRouter>
        
     </div>

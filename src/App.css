@@ -19,9 +19,24 @@ li{
 .black{
     color:#000;
 }
+.main-display {
+  flex: 1;
+  /* padding: 10px; */
+  /* width: 100%; */
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin-left: 11%;
+  width: 89%;
+}
 .container{
-    width: 85%;
-    margin: 0px auto;
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+  height: 100%;
+  /* margin: 0 auto; */
+  width: 100%;
+  overflow: hidden;
+  /* margin-left: 11%; */
 }
 .d-flex{
     display: flex;
@@ -124,11 +139,11 @@ h1,h2,h3,h4,h5,h6,span{
   .ls-l {
     letter-spacing: -.05em!important;
   }
-  .container{
+  /* .container{
     width: 85%;
     margin: 0px auto;
     overflow: hidden;
-  }
+  } */
   .mxy-30{
     margin-right: 30px;
   }
