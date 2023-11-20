@@ -48,7 +48,7 @@ function Sidebar() {
     {
       svg: WatchLaterIcon,
       name: "watch later",
-      links:"/comingsoon"
+      links:"/watchlist"
     },
     {
       svg: SubscriptionsIcon,
