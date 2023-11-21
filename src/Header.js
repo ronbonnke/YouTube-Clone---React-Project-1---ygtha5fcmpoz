@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 import LoginSignup from "./components/LoginSignup";
 import Searchlist from "./pages/Searchlist";
 import { useState } from "react";
-import UpdatePassword from "./pages/UpdatePassword";
+
 
 // import axios from "./API/axios";
 
@@ -38,6 +38,7 @@ function Header() {
     const userInput = event.target.value;
     setSearchData(userInput);
     setShowSuggestions(userInput.length > 0);
+    console.log('flaG:' , userInput.length);
   };
   console.log(showSuggestions);
 
@@ -107,9 +108,7 @@ function profileClickhandler(){
             searchData={searchData}
             clearSearchValue={clearSearchValue}
             />
-          )}
-         
-
+          )}         
           {console.log(searchData)}
         <div className="search-box absolute d-flex align-items-center justify-content-center">
          <SeachBox/>
@@ -117,11 +116,11 @@ function profileClickhandler(){
         </InputGroup>
   {/* </Link> */}
       </div>
-     
       <div className="voice-search d-flex align-items-center">
         <VoiceSearch />
       </div>
     </div>
+    
     <div className="upload-video d-flex align-items-center">
       <div className="create-options">
         <UploadVideo />
@@ -141,38 +140,32 @@ function profileClickhandler(){
 
         </div>
         </div>
-      {/* <Popover>
-        <PopoverTrigger>
-      
-        </PopoverTrigger>
-        <PopoverContent color='black' bg='blue.800' borderColor='blue.800'>
-    <PopoverArrow />
-    <PopoverCloseButton />
-    
-    <PopoverHeader style={{marginLeft:"10px"}}
-   
-    className="barHeader">create an account </PopoverHeader>
-    <PopoverBody className="bar" >
-      <Link to={'/login'}><button>login</button></Link>
-      <Link to={'/Register'}><button>Register</button></Link>
-      <Link to={'/'}><button>Logout</button></Link>
-    </PopoverBody>
-  </PopoverContent>
-      </Popover> */}
-        
-         
-    
     
     </div>
   </div>
     )
-    
-    
-    
-    
   }
+export default Header;
+
+  {/* <Popover>
+    <PopoverTrigger>
   
-  export default Header;
+    </PopoverTrigger>
+    <PopoverContent color='black' bg='blue.800' borderColor='blue.800'>
+<PopoverArrow />
+<PopoverCloseButton />
+
+<PopoverHeader style={{marginLeft:"10px"}}
+
+className="barHeader">create an account </PopoverHeader>
+<PopoverBody className="bar" >
+  <Link to={'/login'}><button>login</button></Link>
+  <Link to={'/Register'}><button>Register</button></Link>
+  <Link to={'/'}><button>Logout</button></Link>
+</PopoverBody>
+</PopoverContent>
+  </Popover> */}
+    
   
   // <div className="header" >{
   //   headerItems.map(item => <HeaderItem item={item}/> ) 

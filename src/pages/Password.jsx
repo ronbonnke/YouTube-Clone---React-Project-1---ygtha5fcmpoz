@@ -1,169 +1,110 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import axios from "../API/axios";
+import { useNavigate } from 'react-router-dom';
 
-function UpdatePassword() {
+const UpdatePassword = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const [error, setError] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const handleUpdatePassword = async () => {
+    try {
+      const authToken = localStorage.getItem("token");
 
-  const handleCheck = () => {
-    setChecked(!checked);
-  };
+      const response = await axios.patch(
+        "https://academics.newtonschool.co/api/v1/user/updateMyPassword",
+        {
+          name: "test6969",
+          email: "test6969@gmail.com",
+          passwordCurrent: currentPassword,
+          password: newPassword,
+          appType: "ott",
+        },
+        {
+          headers: {
+            'projectID': 'f104bi07c490',
+            'Authorization': `Bearer ${authToken}`,
+          },
+        }
+      );
 
-  const handleClick = (e) => {
-    if (email && password && checked) {
-      if (email.indexOf("@") === -1) {
-        setMessage("Email is invalid");
-        setError(true);
-      } else if (password.length < 8) {
-        setMessage("Password must be at least 8 characters long");
-        setError(true);
-      } else if (newPassword.length < 8) {
-        setMessage("Password must be at least 8 characters long");
-        setError(true);
+      const data = response.data;
+
+      if (data.status === "success") {
+        // Password updated successfully
+        console.log("Password updated successfully");
+        navigate('/'); // Navigate to the home page
       } else {
-        fetchAccount();
+        setError(data.message || "An error occurred while updating the password");
       }
-    } else {
-      setMessage("All Fields must be filled");
-      setError(true);
+    } catch (error) {
+      console.error("An error occurred: ", error);
+      setError("An error occurred while updating the password");
     }
   };
 
-  const fetchAccount = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("projectId", "f104bi07c490");
+  const inputStyle = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "15px",
+    borderRadius: "5px",
+    border: "1px solid #ccc",
+    boxSizing: "border-box",
+  };
 
-    var raw = JSON.stringify({
-      name: "ron",
-      email: "ron123@gmail.com",
-      passwordCurrent: "123456789",
-      password: "123456789",
-      appType: "ott",
-    });
+  const errorStyle = {
+    color: 'red',
+    marginBottom: '10px',
+  };
 
-    var requestOptions = {
-      method: "PATCH",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(
-      "https://academics.newtonschool.co/api/v1/user/password",
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.status === "success") {
-          return navigate("/");
-        } else {
-          setMessage(result.message);
-          setError(true);
-        }
-      })
-      .catch((error) => console.log("error", error));
+  const buttonStyle = {
+    width: "100%",
+    padding: "10px",
+    backgroundColor: "#008080",
+    color: "white",
+    borderRadius: "5px",
+    cursor: "pointer",
   };
 
   return (
-    <div
-      className="login-container"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        border: "2px solid black",
-        textAlign: "center",
-        height: "500px",
-        width: "450px",
-        borderRadius: "5px",
-        padding: "10px",
-        paddingTop:"0px",
-        margin: "auto",
-        fontSize:"30px"
-      }}
-    >
-      <div className="left-container">
-        <div className="avatar-container"></div>
-      </div>
-      <div className="right-container">
-        
-        <div className="login-form" style={{ marginTop: "0px"}}>
-          <h1 style={{fontSize:"27px"}}>Forgot Your Password?</h1>
-          <p className="loginpara" style={{fontSize:"20px", padding:"8px"}}>
-            Enter the email address
-          </p>
-          <div className={error ? "errorBox" : "hiddenBox"}>{message}</div>
-          <input
-            className="loginput"
-            
-            type="email"
-            placeholder="Email Address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={{ width: "300px", padding: "10px",textAlign:"center" }}
-            required
-          />
-          <br />
-          <input
-            className="loginput"
-            type="password"
-            placeholder="Old Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="off"
-            style={{ width: "300px", padding: "10px" ,textAlign:"center" }}
-            required
-          />
-          <br />
-          <input
-            className="loginput"
-            type="password"
-            placeholder="New Password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-            autoComplete="off"
-            style={{ width: "300px", padding: "10px",textAlign:"center"  }}
-            required
-          />
-          <br />
-          <div className="capta-container" style={{ marginTop: "10px" }}>
-            <div className="input-l">
-              <input
-                type="checkbox"
-                className="checkbox"
-                value={checked}
-                onChange={handleCheck}
-              />
-              <p style={{fontSize:"20px"}}>I'm not a robot</p>
-            </div>
-            <div className="input-r">
-              <p className="recaptcha" style={{fontSize:"20px", padding:"8px"}}>
-                reCAPTCHA <br />
-                <span>Privacy-Terms</span>
-              </p>
-            </div>
-          </div>
-          <button
-            className="submit-btn"
-            type="submit"
-            onClick={handleClick}
-            style={{ marginTop: "20px", padding: "10px" }}
-          >
-            Update Password
-          </button>
-        </div>
-      </div>
+    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
+      <label style={{ fontSize: "18px", marginBottom: "15px", display: "block" }}>Current Password</label>
+      <input
+        type="password"
+        value={currentPassword}
+        onChange={(e) => setCurrentPassword(e.target.value)}
+        style={inputStyle}
+      />
+
+      <label style={{ fontSize: "18px", marginBottom: "15px", display: "block" }}>New Password</label>
+      <input
+        type="password"
+        value={newPassword}
+        onChange={(e) => setNewPassword(e.target.value)}
+        style={inputStyle}
+      />
+
+      <label style={{ fontSize: "18px", marginBottom: "15px", display: "block" }}>Confirm New Password</label>
+      <input
+        type="password"
+        value={confirmNewPassword}
+        onChange={(e) => setConfirmNewPassword(e.target.value)}
+        style={inputStyle}
+      />
+
+      {error && <p style={errorStyle}>{error}</p>}
+
+      <button
+        type="button"
+        onClick={handleUpdatePassword}
+        style={buttonStyle}
+      >
+        Update Password
+      </button>
     </div>
   );
-}
+};
 
 export default UpdatePassword;

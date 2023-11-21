@@ -1,26 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
 import { ListItem, UnorderedList, Container } from "@chakra-ui/react";
 
 export default function Searchlist({ searchData, clearSearchValue }) {
-  console.log(searchData);
   const navigate = useNavigate();
   const [result, setResult] = useState([]);
   const suggestionRef = useRef(null);
 
   useEffect(() => {
-    const storedData = localStorage.getItem("videoData");
-    // console.log('storedData',storedData)
-    const getData = JSON.parse(storedData);
-    const parseData = getData ? getData.videoData : [];
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://academics.newtonschool.co/api/v1/ott/show?search={"title":"${searchData}"}`,
+          {
+            method: "GET",
+            headers: {
+              projectId:" f104bi07c490",
+            },
+          }
+        );
 
-    const movieName = parseData.filter((item) => {
-      return item.title?.toLowerCase().includes(searchData?.toLowerCase());
-    });
+        const data = await response.json();
+        console.log("API Response:", data);
 
-    setResult(movieName);
+        if (response.ok) {
+          setResult(data.data || []);
+        } else {
+          console.error("Error fetching data:", data.message);
+          setResult([]);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setResult([]);
+      }
+    };
+
+    if (searchData) {
+      fetchData();
+    } else {
+      setResult([]);
+    }
+    
   }, [searchData]);
+  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -36,9 +58,10 @@ export default function Searchlist({ searchData, clearSearchValue }) {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+  console.log(result);
 
   const handleSuggestionClick = (selectedItem) => {
-    navigate(`/result/${selectedItem._id}`);
+    navigate(`/watch/${selectedItem._id}`);
     clearSearchValue();
     setResult([]);
   };
@@ -55,19 +78,17 @@ export default function Searchlist({ searchData, clearSearchValue }) {
             top: "110%",
             left: 0,
             width: "100%",
-            Height: "100vh",
+            height: "100vh",
             zIndex: 2,
             cursor: "pointer",
-            borderRadius:"25px",
+            borderRadius: "25px",
           }}
         >
           <UnorderedList style={{ listStyle: "none" }}>
             {result.map((item) => (
-              
               <ListItem className="cardStyle" key={item.id}>
-                
                 <Link
-                  to={`/result/${item._id}`}
+                  to={`/watch/${item._id}`}
                   onClick={() => handleSuggestionClick(item)}
                   style={{ textDecoration: "none", color: "black" }}
                 >

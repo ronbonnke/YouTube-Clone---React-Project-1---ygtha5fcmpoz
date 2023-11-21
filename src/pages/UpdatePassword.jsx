@@ -1,5 +1,5 @@
+import { Button, Container, FormControl, FormLabel, Input, VStack } from "@chakra-ui/react";
 import React, { useState } from 'react';
-import { Container, Button, Input, VStack, FormControl, FormLabel } from "@chakra-ui/react";
 import axios from "../API/axios";
 
 const UpdatePassword = () => {
@@ -9,14 +9,25 @@ const UpdatePassword = () => {
   const [error, setError] = useState("");
 
   const handleUpdatePassword = async () => {
-    // Add validation logic here
-
     try {
-      const response = await axios.post("/user/update-password", {
-        currentPassword,
-        newPassword,
-        confirmNewPassword,
-      });
+      const authToken = localStorage.getItem("token");
+
+      const response = await axios.patch(
+        "https://academics.newtonschool.co/api/v1/user/updateMyPassword",
+        {
+          name: "test6969",
+          email: "test6969@gmail.com",
+          passwordCurrent: currentPassword,
+          password: newPassword,
+          appType: "ott",
+        },
+        {
+          headers: {
+            'projectID': 'f104bi07c490',
+            'Authorization': `Bearer ${authToken}`,
+          },
+        }
+      );
 
       const data = response.data;
 
@@ -24,8 +35,7 @@ const UpdatePassword = () => {
         // Password updated successfully
         console.log("Password updated successfully");
       } else {
-        // Handle error from the server
-        setError(data.message);
+        setError(data.message || "An error occurred while updating the password");
       }
     } catch (error) {
       console.error("An error occurred: ", error);

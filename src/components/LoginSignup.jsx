@@ -6,7 +6,8 @@ import { Link, NavLink, useLocation, json } from "react-router-dom";
 import axios from "../API/axios";
 
 
-const Login = ({ setLoggedInStatus, setUserName }) => {
+
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -71,8 +72,9 @@ const data = response.data
             setError("Login successfully");
             setColor("green");
             setLogin(true);
-            setUserName(email);
-            setLoggedInStatus(true);
+            // setUserName(email);
+            // setLoggedInStatus(true);
+            
 
           } else {
             console.error("Registration Failed");
