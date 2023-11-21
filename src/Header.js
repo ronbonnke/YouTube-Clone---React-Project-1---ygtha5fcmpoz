@@ -4,6 +4,7 @@ import HeaderItem from "./components/HeaderItem";
 import Menubar from "./headers/Menubar";
 import Logo from "./headers/Logo";
 import Profile from "./headers/Profile";
+import DropdownMenu from "./components/DropdownMenu";
 import SeachBox from "./headers/SearchBox";
 import UploadVideo from "./headers/UploadVideo";
 import VoiceSearch from "./headers/VoiceSearch";
@@ -24,6 +25,7 @@ import { Link } from "react-router-dom";
 import LoginSignup from "./components/LoginSignup";
 import Searchlist from "./pages/Searchlist";
 import { useState } from "react";
+import UpdatePassword from "./pages/UpdatePassword";
 
 // import axios from "./API/axios";
 
@@ -120,7 +122,6 @@ function profileClickhandler(){
         <VoiceSearch />
       </div>
     </div>
-   
     <div className="upload-video d-flex align-items-center">
       <div className="create-options">
         <UploadVideo />
@@ -131,13 +132,18 @@ function profileClickhandler(){
       </div>
     
       <div className="profile-menu">
-      <Popover>
+        <div className="profile-img" >
+        {/* <Profile /> */}
+        <DropdownMenu  profile={<Profile />}/>
+      
+
+      
+
+        </div>
+        </div>
+      {/* <Popover>
         <PopoverTrigger>
       
-        <div className="profile-img" >
-        <Profile />
-      
-        </div>
         </PopoverTrigger>
         <PopoverContent color='black' bg='blue.800' borderColor='blue.800'>
     <PopoverArrow />
@@ -152,10 +158,10 @@ function profileClickhandler(){
       <Link to={'/'}><button>Logout</button></Link>
     </PopoverBody>
   </PopoverContent>
-      </Popover>
+      </Popover> */}
         
          
-      </div>
+    
     
     </div>
   </div>

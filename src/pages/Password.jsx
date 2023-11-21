@@ -82,40 +82,34 @@ function UpdatePassword() {
         justifyContent: "center",
         border: "2px solid black",
         textAlign: "center",
-        height: "450px",
-        width: "400px",
+        height: "500px",
+        width: "450px",
         borderRadius: "5px",
-        padding: "20px",
+        padding: "10px",
+        paddingTop:"0px",
         margin: "auto",
+        fontSize:"30px"
       }}
     >
       <div className="left-container">
         <div className="avatar-container"></div>
       </div>
-      <div className="right-container" style={{ marginTop: "20px" }}>
-        <div className="account">
-          <Link to="/login">
-            <button className="login-btn">Login</button>
-          </Link>
-          <span style={{ margin: "0 10px" }}></span>
-          <Link to="/register">
-            <button className="login-btn">Register</button>
-          </Link>
-        </div>
-        <div className="login-form" style={{ marginTop: "20px" }}>
-          <h1>Forgot Your Password?</h1>
-          <p className="loginpara">
-            Enter the email address you used when you signed up, and we'll help
-            you out.
+      <div className="right-container">
+        
+        <div className="login-form" style={{ marginTop: "0px"}}>
+          <h1 style={{fontSize:"27px"}}>Forgot Your Password?</h1>
+          <p className="loginpara" style={{fontSize:"20px", padding:"8px"}}>
+            Enter the email address
           </p>
           <div className={error ? "errorBox" : "hiddenBox"}>{message}</div>
           <input
             className="loginput"
+            
             type="email"
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ width: "300px", padding: "10px" }}
+            style={{ width: "300px", padding: "10px",textAlign:"center" }}
             required
           />
           <br />
@@ -126,7 +120,7 @@ function UpdatePassword() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="off"
-            style={{ width: "300px", padding: "10px" }}
+            style={{ width: "300px", padding: "10px" ,textAlign:"center" }}
             required
           />
           <br />
@@ -137,7 +131,7 @@ function UpdatePassword() {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             autoComplete="off"
-            style={{ width: "300px", padding: "10px" }}
+            style={{ width: "300px", padding: "10px",textAlign:"center"  }}
             required
           />
           <br />
@@ -149,10 +143,10 @@ function UpdatePassword() {
                 value={checked}
                 onChange={handleCheck}
               />
-              <p>I'm not a robot</p>
+              <p style={{fontSize:"20px"}}>I'm not a robot</p>
             </div>
             <div className="input-r">
-              <p className="recaptcha">
+              <p className="recaptcha" style={{fontSize:"20px", padding:"8px"}}>
                 reCAPTCHA <br />
                 <span>Privacy-Terms</span>
               </p>
