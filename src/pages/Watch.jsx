@@ -28,7 +28,9 @@ function Watch() {
         console.log("data video: ", data.data.video_url);
     
         setShowItemId(data.data);
-    
+        if (videoRef.current) {
+          videoRef.current.load();
+        }
         if (!response.ok) {
           console.error("Failed to fetch data.");
           return;

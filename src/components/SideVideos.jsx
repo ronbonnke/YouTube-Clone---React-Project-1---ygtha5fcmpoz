@@ -1,11 +1,12 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios'; 
 import { Link } from 'react-router-dom';
 function SideVideos() {
     const [videos, setVideos] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
+      // const videoRef = useRef(null);
         // Define your API endpoint based on the base URL
         const apiUrl = 'https://academics.newtonschool.co/api/v1/ott/show?limit=100';
         // Replace with the correct API endpoint
@@ -23,7 +24,9 @@ function SideVideos() {
             console.error('Error fetching data:', error);
             setLoading(false);
           });
+         
       }, []); 
+      
      
   return (
     <div style={{display:"flex",flexDirection:"column",marginLeft:"5px"}}>

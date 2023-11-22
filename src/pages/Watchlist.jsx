@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Container, Box, Button, Flex, Grid } from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+
 function Watchlist() {
   const [watchlist, setWatchList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -65,78 +67,90 @@ function Watchlist() {
   useEffect(() => {
     getWatchList();
   }, []);
+ 
 
   return (
     <div>
-      <>
-      <h1> my WatchList</h1>
-                <hr style={{ color: "white" }} />
-                <Grid
-                  templateColumns="repeat(2, 1fr)"
-                  width="55rem"
-                  height="auto"
-                >
-                  {watchlist.map((item) => (
-                    <Box
-                      style={{
-                        margin: "10px",
-                        padding: "20px",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItem: "flex-start",
-                        height: "150px",
-                        width: "300px",
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      <Container
-                        style={{
-                          maxHeight: "150px",
-                          width: "50%",
-                          overflow: "hidden",
-                        }}
-                      >
-                        <img
-                          src={item.thumbnail}
-                          alt="item.title"
-                          style={{
-                            width: "100%",
-                            objectFit: "cover",
-                            borderRadius: "8px",
-                          }}
-                        />
-                      </Container>
-                      <div
-                        style={{
-                          textAlign: "left",
-                          color: "white",
-                          paddingLeft: "20px",
-                          paddingTop: "50px",
-                          width: "50%",
-                          height: "40px",
-                        }}
-                      >
-                        {item.title}
-                      </div>
-                      <Button
-                        onClick={() => addRemoveWatchList(item?._id)}
-                        style={{
-                          top: "-90px",
-                          left: "80px",
-                          cursor: "pointer",
-                          border: "none",
-                          backgroundColor: "transparent",
-                          color: "white",
-                        }}
-                      >
-                        <AiOutlineClose />
-                      </Button>
-                    </Box>
-                  ))}
-                </Grid>
-              </>
-       
-    </div>
+    <h1>My WatchList</h1>
+    <hr style={{ color: "white" }} />
+    <Grid templateColumns="repeat(4, 1fr)" gap={4} width="80%" mx="auto">
+      {watchlist.map((item) => (
+        <Box
+          key={item._id}
+          style={{
+            margin: "10px",
+            padding: "20px",
+            position: "relative",
+            height: "300px",
+            width: "250px",
+          }}
+        >
+          <Container key={item._id}
+            style={{
+              maxHeight: "200px",
+              width: "100%",
+              overflow: "hidden",
+            }}
+          >
+            <Link to={`/watch/${item._id}`}>
+            
+            <img
+              src={item.thumbnail}
+              alt={item.title}
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "8px",
+                maxHeight: "100%",
+              }}
+            />
+            </Link>
+
+          </Container>
+          <div style={{ position: "absolute", bottom: 0, width: "100%" }}>
+            <div
+              style={{
+                textAlign: "left",
+                color: "black",
+                padding: "10px 0",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {item.title}
+            </div>
+            <div
+              style={{
+                textAlign: "left",
+                color: "black",
+                padding: "10px 0",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {item.description}
+            </div>
+          </div>
+          <Button
+            onClick={() => addRemoveWatchList(item._id)}
+            style={{
+              cursor: "pointer",
+              border: "none",
+              backgroundColor: "transparent",
+              color: "black",
+              position: "absolute",
+              top: 0,
+              right: 0,
+            }}
+          >
+            <AiOutlineClose />
+          </Button>
+        </Box>
+      ))}
+    </Grid>
+  </div>
   )
 }
 
