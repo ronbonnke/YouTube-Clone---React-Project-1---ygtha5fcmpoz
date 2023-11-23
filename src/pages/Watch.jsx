@@ -66,15 +66,19 @@ function Watch() {
               <Flex
                 direction="row"  // Set direction to "row" to align items horizontally
                 alignItems="center" // Align items vertically to the center
-                style={{ paddingLeft: "10px", width: "65%"  }}
+                style={{ paddingLeft: "10px", width: "100%"  }}
               >
                 <h1 style={{ paddingTop: "20px", marginRight: "10px" }}>
                   {itemId.title}
                 </h1>
                 <Flex marginLeft="auto" alignItems="center">
               <div style={{ display: "flex", alignItems: "center", margin: 0 }}>
-                <BiLike style={{ paddingLeft: "20px", width: "50%", height: "25px", margin: 0 }} />
-                <BiDislike style={{ paddingLeft: "20px", width: "50%", height: "25px", margin: 0 }} />
+
+
+                {/* <BiLike style={{ paddingLeft: "20px", width: "50%", height: "25px", margin: 0 }} />
+                <BiDislike style={{ paddingLeft: "20px", width: "50%", height: "25px", margin: 0 }} /> */}
+
+                
                 <Watchlistbutton style={{ paddingLeft: "20px", width: "50%", height: "25px", margin: 0 }} />
               </div>
             </Flex>

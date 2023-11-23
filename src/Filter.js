@@ -1,5 +1,7 @@
 import React from "react";
 import "./Filter.css";
+import { Link } from "react-router-dom";
+
 
 function Filter() {
   return (
@@ -7,55 +9,86 @@ function Filter() {
       {/* <div className="single-filter">
         <span className="filter-items pointer active">All</span>
       </div> */}
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer ">Mixes</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Music</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">live</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Cooking</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Gaming</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Movies</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Comedy</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Mototcycling</span>
-      </div>
+      </div></Link>
      
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Bodybuilding</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">News</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Programming</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">Live</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">JavaScript</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">ReactJs</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
         <span className="filter-items pointer">ReactDom</span>
-      </div>
+      </div></Link>
+
+      <Link to={"/comingsoon"}>
       <div className="single-filter">
-        <span className="filter-items pointer">NodeJS</span>
-      </div>
+        <span className="filter-items pointer">Node</span>
+      </div></Link>
+
       <div className="single-filter">
         <svg
           viewBox="0 0 16 13"

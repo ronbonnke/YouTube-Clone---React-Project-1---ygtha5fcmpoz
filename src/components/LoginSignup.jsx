@@ -1,5 +1,6 @@
 import { CloseIcon } from "@chakra-ui/icons";
 import { Button, Center, Container } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 import { Link, NavLink, useLocation, json } from "react-router-dom";
@@ -8,6 +9,7 @@ import axios from "../API/axios";
 
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -72,6 +74,7 @@ const data = response.data
             setError("Login successfully");
             setColor("green");
             setLogin(true);
+            navigate('/');
             // setUserName(email);
             // setLoggedInStatus(true);
             
@@ -100,8 +103,8 @@ const data = response.data
         justifyContent:"center",
         marginTop: "100px",
         borderRadius: "5px",
-        height: "390px",
-      border: "2px solid black"
+        height: "370px",
+        border: "2px solid black"
       }}
     >
 
@@ -112,7 +115,7 @@ const data = response.data
             borderRadius: "8%",
             marginLeft: "95%",
             height: "20px",
-            width: "23px",
+            width: "20px",
             padding:"2px",
             backgroundColor:"red",
             objectFit:"contain",
@@ -136,6 +139,7 @@ const data = response.data
             border: "2px solid black",
             textAlign: "center",
             marginTop: "0px",
+            justifyContent: "center",
           }}
           type="text"
           placeholder="Enter Your Email"
@@ -168,7 +172,7 @@ const data = response.data
         </div>
         {login ? (
           <>
-            <Link to="/">
+            {/* <Link to="/">
               <Button
                 style={{
                   marginLeft: "40%",
@@ -183,7 +187,7 @@ const data = response.data
               >
                 Go to Home
               </Button>
-            </Link>
+            </Link> */}
           </>
         ) : (
           <>
@@ -219,15 +223,15 @@ const data = response.data
               <div
                 style={{ marginLeft: "36px", marginTop: "35px", color: "black"}}
               >
-              <span style={{ color: "#000" , }}><button style={{backgroundColor:"lightgrey", borderRadius:"5px",height:"35px", width: "170px",  cursor:"pointer" }}>Register now</button></span>
+              <span style={{ color: "#000" , }}><button style={{backgroundColor:"lightgrey", borderRadius:"5px",height:"35px", width: "120px",  cursor:"pointer" }}>Register now</button></span>
               </div>
             </Link>
 
             <Link to="/password" style={{ textDecoration: "none" }}>
             <div
-               style={{marginRight:"55px", marginTop:"35px"}}
+               style={{marginRight:"50px", marginTop:"35px"}}
               >
-              <span style={{ color: "#000" , }}><button style={{backgroundColor:"lightgrey", borderRadius:"5px",height:"35px", width: "180px",cursor:"pointer"}}>Forgot password</button></span>
+              <span style={{ color: "#000" , }}><button style={{backgroundColor:"lightgrey", borderRadius:"5px",height:"35px", width: "150px",cursor:"pointer"}}>Forgot password</button></span>
               </div>
               </Link>
           </div>

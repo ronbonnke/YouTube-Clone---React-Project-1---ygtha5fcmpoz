@@ -76,9 +76,11 @@ function profileClickhandler(){
   return (
     <div className="header d-flex align-items-center justify-content-space-between" >
     <div className="header-left-items d-flex align-items-center mxy-30">
+      
+      <Link to={"/"}>
       <div className="menubar">
         <Menubar/>
-      </div>
+      </div></Link>
 
       <div className="logo">
         <a href="#">
@@ -116,19 +118,22 @@ function profileClickhandler(){
         </InputGroup>
   {/* </Link> */}
       </div>
+      <Link to={"/comingsoon"}>
       <div className="voice-search d-flex align-items-center">
         <VoiceSearch />
-      </div>
+      </div></Link>
     </div>
     
+   
     <div className="upload-video d-flex align-items-center">
+      <Link to={"/comingsoon"}>
       <div className="create-options">
         <UploadVideo />
-      </div>
+      </div></Link>
     
-      <div className="youtube-apps">
+     <Link to={"/comingsoon"}> <div className="youtube-apps">
         <YoutubeApps />
-      </div>
+      </div></Link>
     
       <div className="profile-menu">
         <div className="profile-img" >

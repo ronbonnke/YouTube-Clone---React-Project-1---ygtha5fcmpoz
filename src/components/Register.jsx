@@ -105,7 +105,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
             borderRadius: "8%",
             marginLeft: "95%",
             height: "20px",
-            width: "23px",
+            width: "20px",
             backgroundColor:"red",
             objectFit:"contain",
             
