@@ -77,10 +77,10 @@ function profileClickhandler(){
     <div className="header d-flex align-items-center justify-content-space-between" >
     <div className="header-left-items d-flex align-items-center mxy-30">
       
-      <Link to={"/"}>
+      
       <div className="menubar">
         <Menubar/>
-      </div></Link>
+      </div>
 
       <div className="logo">
         <a href="#">
