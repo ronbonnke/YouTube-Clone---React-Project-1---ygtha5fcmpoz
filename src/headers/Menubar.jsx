@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar";
 
 function Menubar() {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
+ 
 
   const handleToggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);

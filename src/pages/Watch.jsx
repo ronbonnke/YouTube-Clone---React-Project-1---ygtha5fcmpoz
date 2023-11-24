@@ -91,7 +91,7 @@ function Watch() {
             <p>Loading...</p>
           )}
            </div>
-           <div style={{ overflowY: "auto", overflowX: "hidden", height: "100vh", width:"40%"}}>
+           <div style={{ overflowY: "auto", overflowX: "hidden", height: "100vh", width:"40%",}}>
 
                  <SideVideos/>
            </div>

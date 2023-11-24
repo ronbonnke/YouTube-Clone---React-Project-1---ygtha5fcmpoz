@@ -29,12 +29,12 @@ function SideVideos() {
       
      
   return (
-    <div style={{display:"flex",flexDirection:"column",marginLeft:"5px"}}>
+    <div style={{display:"flex",flexDirection:"column",marginLeft:"10px"}}>
       {loading ? (
             <p>Loading...</p>
           ) : videos.data.length > 0 ? (
             videos.data.map((video) => (
-              <div className="card" key={video._id}>
+              <div className="card" key={video._id} >
                 <Link
                 to={`/watch/${video._id}`}
                 >
