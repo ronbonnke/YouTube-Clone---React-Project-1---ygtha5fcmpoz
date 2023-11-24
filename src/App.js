@@ -24,7 +24,7 @@ function App() {
       <BrowserRouter>
       
       <Header/>
-      <Sidebar />
+      {/* <Sidebar /> */}
           
       <div className="main-display">
           <div className="container">
