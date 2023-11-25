@@ -85,35 +85,31 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
     }
   };
   return (
+
+    
+
     <Container
       sx={{
         bg: "white",
         width: "30%",
         marginLeft: "38%",
         marginTop: "50px",
-        borderRadius: "5px",
+        borderRadius: "10px",
         height: "530px",
-        border: "2px solid black",
+        border: "1px solid lightgrey",
         alignItems: "center",
         height: "450px"
       }}
     >
-      <NavLink to="/">
-        <CloseIcon
-          style={{
-            color: "black",
-            borderRadius: "8%",
-            marginLeft: "95%",
-            height: "20px",
-            width: "20px",
-            backgroundColor:"red",
-            objectFit:"contain",
-            
-          }}
-        />
-      </NavLink>
+      
 
       <form style={{ border: "2px solid white", borderRadius: "10px", }}>
+      <div style={{ textAlign: "center" }}>
+      <img
+            style={{ height: "70px", alignItems: "center" }}
+            src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
+            alt=""
+          /></div>
         <h2 style={{ marginLeft: "8%", color: "#363636", paddingBottom:"20px"}}>
           {" "}
           Create a new account{" "}

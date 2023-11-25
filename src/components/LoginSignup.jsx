@@ -8,6 +8,7 @@ import axios from "../API/axios";
 
 
 
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -108,7 +109,7 @@ const data = response.data
       }}
     >
 
-      <NavLink to="/">
+      {/* <NavLink to="/">
         <CloseIcon
           style={{
             color: "black",
@@ -121,7 +122,7 @@ const data = response.data
             objectFit:"contain",
           }}
         />
-      </NavLink>
+      </NavLink> */}
       
       <form style={{ border: "2px solid white", borderRadius: "10px"}}>
         <h2 style={{textAlign: "center",fontSize:"30px",paddingBottom: "20px",paddingLeft:"0px"}}>Login</h2>
