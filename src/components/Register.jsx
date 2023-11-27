@@ -90,15 +90,16 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
 
     <Container
       sx={{
-        bg: "white",
-        width: "30%",
-        marginLeft: "38%",
-        marginTop: "50px",
-        borderRadius: "10px",
-        height: "530px",
-        border: "1px solid lightgrey",
-        alignItems: "center",
-        height: "450px"
+          bg: "white",
+          width: "25%",
+          left: "50%", // Centered horizontally
+          paddingTop:"30px",
+          top: "50%", // Centered vertically
+          position: "absolute",
+          borderRadius: "2%",
+          border: "1px solid lightgrey",
+          textAlign: "center",
+          transform: "translate(-50%, -50%)", // Centering trick
       }}
     >
       
@@ -110,9 +111,9 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
             src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
             alt=""
           /></div>
-        <h2 style={{ marginLeft: "8%", color: "#363636", paddingBottom:"20px"}}>
+        <h2 style={{ color: "#363636", paddingBottom:"20px", textAlign:"center", fontSize:"25px"}}>
           {" "}
-          Create a new account{" "}
+          Sign in{" "}
         </h2>
 
         <h4 style={{ color: "#666", marginLeft: "8%", marginRight: "5%" }}>
@@ -126,7 +127,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
             width: "80%",
             marginBottom: "5%",
             borderRadius: "5px",
-            border: "1px solid gray",
+            border: "2px solid #318CE7",
             textAlign: "center",
           }}
           type="text"
@@ -144,6 +145,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
             borderRadius: "5px",
             border: "1px solid gray",
             textAlign: "center",
+            border: "2px solid #318CE7",
           }}
           type="text"
           placeholder="Enter Your Email ID"
@@ -161,6 +163,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
             border: "1px solid gray",
             marginTop: "20px",
             textAlign: "center",
+            border: "2px solid #318CE7",
           }}
           type="password"
           placeholder="Create a Password"
