@@ -207,32 +207,23 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
                By proceeding you agree to our Terms of services & privacy policy
             </label>
 
-            <Button
-              type="button"
+            <div
               style={{
                 cursor: "pointer",
-                marginLeft: "8%",
-                height: "45px",
-                width: "82%",
-                fontSize: "Bolder",
-                borderRadius: "5px",
-                border: "2px solid black",
-                marginTop: "25px",
-                color: "black",
-                background: "#fff",
+                color: "#318CE7",
               }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#fff";
-                e.target.style.border = "1px solid #000";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#fff";
-                e.target.style.border = "1px solid #000";
-              }}
+              // onMouseEnter={(e) => {
+              //   e.target.style.backgroundColor = "#fff";
+              //   e.target.style.border = "1px solid #000";
+              // }}
+              // onMouseLeave={(e) => {
+              //   e.target.style.backgroundColor = "#fff";
+              //   e.target.style.border = "1px solid #000";
+              // }}
               onClick={handleLogin}
             >
               Create Account
-            </Button>
+            </div>
             <br />
 
             <div
