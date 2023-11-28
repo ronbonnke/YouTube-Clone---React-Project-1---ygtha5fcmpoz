@@ -73,6 +73,15 @@ img.dp{
     .menubar{
         display: none;
     }
+    .voice-search d-flex align-items-center{
+        display: none;
+    }
+    .create-options{
+        display: none;
+    }
+    .youtube-apps{
+        display: none;
+    }
     /* .header-middle-items{
         display: none;
     } */
