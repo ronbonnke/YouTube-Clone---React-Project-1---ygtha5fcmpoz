@@ -97,15 +97,17 @@ const data = response.data
 
     <Container
       sx={{
-        bg: "white",
-      
-        width: "30%",
-        marginLeft: "38%",
-        justifyContent:"center",
-        marginTop: "100px",
-        borderRadius: "5px",
-        height: "370px",
-        border: "2px solid black"
+          bg: "white",
+          width: "25%",
+          height: "55%",
+          left: "50%", // Centered horizontally
+          paddingTop:"30px",
+          top: "50%", // Centered vertically
+          position: "absolute",
+          borderRadius: "2%",
+          border: "1px solid lightgrey",
+          textAlign: "center",
+          transform: "translate(-50%, -50%)", // Centering trick
       }}
     >
 
@@ -125,7 +127,12 @@ const data = response.data
       </NavLink> */}
       
       <form style={{ border: "2px solid white", borderRadius: "10px"}}>
-        <h2 style={{textAlign: "center",fontSize:"30px",paddingBottom: "20px",paddingLeft:"0px"}}>Login</h2>
+      <div style={{ textAlign: "center" }}>
+      <img
+            style={{ height: "70px", alignItems: "center" }}
+            src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
+            alt=""
+          /></div>
 
         <h4 style={{ color: "#666", marginLeft: "8%", marginRight: "5%" }}>
         

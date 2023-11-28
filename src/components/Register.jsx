@@ -211,6 +211,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
               style={{
                 cursor: "pointer",
                 color: "#318CE7",
+                fontSize: "18px",
               }}
               // onMouseEnter={(e) => {
               //   e.target.style.backgroundColor = "#fff";
