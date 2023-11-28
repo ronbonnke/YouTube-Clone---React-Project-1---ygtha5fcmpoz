@@ -74,10 +74,10 @@ function profileClickhandler(){
 
 
   return (
-    <div className="header d-flex align-items-center justify-content-space-between" >
-    <div className="header-left-items d-flex align-items-center mxy-30">
+    <div className="header" >
+    {/* <div className="header-left-items d-flex align-items-center mxy-30">
       
-      
+       */}
       <div className="menubar">
         <Menubar/>
       </div>
@@ -87,14 +87,14 @@ function profileClickhandler(){
           <Link to={"/"}>
           
           {/* <Logo /> */}
-          <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt="" style={{width:'110px',height:'60px', marginLeft: '0px'}}/>
+          <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""/>
           </Link>
         </a>
       </div>
-    </div>
+    {/* </div> */}
  
-    <div className="header-middle-items d-flex align-items-center">
-      <div className="input-box relative">
+    {/* <div className="header-middle-items d-flex align-items-center"> */}
+      <div className="input-box ">
         {/* <Link to="/searchlist"> */}
         <InputGroup>
         
@@ -122,10 +122,10 @@ function profileClickhandler(){
       <div className="voice-search d-flex align-items-center">
         <VoiceSearch />
       </div></Link>
-    </div>
+    {/* </div> */}
     
    
-    <div className="upload-video d-flex align-items-center">
+    {/* <div className="upload-video d-flex"> */}
       <Link to={"/comingsoon"}>
       <div className="create-options">
         <UploadVideo />
@@ -146,7 +146,7 @@ function profileClickhandler(){
         </div>
         </div>
     
-    </div>
+    {/* </div> */}
   </div>
     )
   }
