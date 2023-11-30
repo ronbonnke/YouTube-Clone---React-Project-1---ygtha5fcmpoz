@@ -21,7 +21,7 @@ export default function Searchlist({ searchData, clearSearchValue }) {
         );
 
         const data = await response.json();
-        console.log("API Response:", data);
+        // console.log("API Response:", data);
 
         if (response.ok) {
           setResult(data.data || []);

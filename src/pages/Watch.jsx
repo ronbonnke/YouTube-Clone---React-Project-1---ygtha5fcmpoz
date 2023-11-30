@@ -2,8 +2,6 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react';
 import { Container, Flex, Button } from "@chakra-ui/react";
-
-import { BiLike , BiDislike } from "react-icons/bi";
 import Watchlistbutton from '../components/Watchlistbutton';
 import SideVideos from '../components/SideVideos';
 
