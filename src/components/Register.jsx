@@ -206,7 +206,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
             <label style={{ fontSize: "10px" }}>
                By proceeding you agree to our Terms of services & privacy policy
             </label>
-
+ 
             <div
               style={{
                 cursor: "pointer",
