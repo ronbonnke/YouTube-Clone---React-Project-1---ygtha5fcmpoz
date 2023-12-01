@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Videos.css";
 import Filter from "./Filter";
-import VideoTile from "./components/VideoTile";
 import Page from "./pages/Page";
 
 function Videos() {
@@ -30,23 +29,7 @@ function Videos() {
   return (
     <div className="videos">
       <Filter />
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        // videos.data.map((video) => (
-        //   <div className="col-md-4" key={video._id}>
-        //     <VideoTile
-        //       title={video.title}
-        //       description={video.description}
-        //       keywords={video.keywords}
-        //       thumbnail={video.thumbnail}
-        //       id={video._id}
-        //     />
-        //   </div>
-        // ))
-
-        <Page />
-      )}
+      {loading ? <p>Loading...</p> : <Page />}
     </div>
   );
 }

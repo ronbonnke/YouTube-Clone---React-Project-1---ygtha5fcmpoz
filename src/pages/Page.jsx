@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 function Page() {
 
     const [videos, setVideos] = useState([]);
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Define your API endpoint based on the base URL
+        
         const apiUrl = 'https://academics.newtonschool.co/api/v1/ott/show?limit=100';
-        // Replace with the correct API endpoint
+        
     
         // Fetch data from your Axios instance
         axios
@@ -19,7 +20,6 @@ function Page() {
           .then((response) => {
             setVideos(response.data);
             setLoading(false);
-    
             console.log('Fetched Data:', response.data);
           })
           .catch((error) => {
@@ -40,11 +40,8 @@ function Page() {
                 <Link
                 to={`/watch/${video._id}`}
                 >
-                
                 <img src={video.thumbnail} className='card-image' alt={video.title} />
                 </Link>
-
-
                 <div className="card-details">
                     <h4>{video.title}</h4>
                 </div>

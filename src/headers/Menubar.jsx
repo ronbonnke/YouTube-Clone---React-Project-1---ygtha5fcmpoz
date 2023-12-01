@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 
 function Menubar() {
-  const [isSidebarVisible, setSidebarVisible] = useState(true);
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
  
 
   const handleToggleSidebar = () => {

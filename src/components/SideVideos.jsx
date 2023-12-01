@@ -8,7 +8,7 @@ function SideVideos() {
     useEffect(() => {
       // const videoRef = useRef(null);
         // Define your API endpoint based on the base URL
-        const apiUrl = 'https://academics.newtonschool.co/api/v1/ott/show?limit=100';
+        const apiUrl = 'https://academics.newtonschool.co/api/v1/ott/show?limit=101';
         // Replace with the correct API endpoint
     
         // Fetch data from your Axios instance

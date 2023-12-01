@@ -62,7 +62,7 @@ const UpdatePassword = () => {
   const buttonStyle = {
     width: "100%",
     padding: "10px",
-    backgroundColor: "#008080",
+    backgroundColor: "#318CE7",
     color: "white",
     borderRadius: "5px",
     cursor: "pointer",

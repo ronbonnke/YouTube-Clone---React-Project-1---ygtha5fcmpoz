@@ -20,8 +20,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <Sidebar /> */}
-
         <div className="main-display">
           <div className="container">
             <Routes>
@@ -37,7 +35,7 @@ function App() {
               <Route path="/newpage" element={<Page />} />
               <Route path="/login" element={<LoginSignup />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/result/:id" element={<SearchResult />} />
+              {/* <Route path="/result/:id" element={<SearchResult />} /> */}
               <Route path="/premium" element={<Premium />} />
               <Route path="/premiumsub" element={<PremiumSub />} />
               <Route path="/comingsoon" element={<ComingSoon />} />
