@@ -48,7 +48,7 @@ function Watch() {
          
           {itemId.video_url ? (
             <>
-              <Flex marginTop="1rem" marginLeft="10px">
+              <Flex marginTop="0%" marginLeft="10px">
                 <div>
 
                 <video ref={videoRef}
