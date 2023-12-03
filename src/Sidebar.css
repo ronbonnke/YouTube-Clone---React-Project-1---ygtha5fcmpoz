@@ -1,39 +1,38 @@
 /* Sidebar.css */
 
 .sidebar {
-    height: 100%;
-    position: fixed;
-    display: flex;
-    transition: 0.3s;
-    overflow-y: auto;
-    background-color: #fff;
-    flex-direction: column;
-    min-width: 150px;
-    background-color: white;
-    top: 20;
-    width: 11%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  transition: 0.3s;
+  overflow-y: auto;
+  background-color: #fff;
+  flex-direction: column;
+  min-width: 150px;
+  background-color: white;
+  top: 20;
+  width: 12%;
 }
 
 .sidebar.open {
-    width: 250px; /* or whatever width you want when open */
+  width: 250px; /* or whatever width you want when open */
 }
 
 .sidebar-item.active {
-    background-color: #9e9e9e99;
+  background-color: #9e9e9e99;
 }
 
 .sidebar-items {
-    justify-content: flex-start;
-    padding: 13px 0px;
-    display: flex;
-    width: 100%;
-    padding-bottom: 9%;
-    
+  justify-content: flex-start;
+  padding: 13px 0px;
+  display: flex;
+  width: 100%;
+  padding-bottom: 9%;
 }
 
 span.sidebar-text {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 /* Media query to hide sidebar on smaller screens */
