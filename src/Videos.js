@@ -8,6 +8,7 @@ function Videos() {
   return (
     <div className="videos">
       <Filter />
+
       <h1>TRENDING 🔥</h1>
       <Homepage
         api={
@@ -26,6 +27,13 @@ function Videos() {
       <Homepage
         api={
           "https://academics.newtonschool.co/api/v1/ott/show?limit=8&keywords=thriller"
+        }
+      />
+
+      <h1>LOVE 💑 </h1>
+      <Homepage
+        api={
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=love"
         }
       />
 
