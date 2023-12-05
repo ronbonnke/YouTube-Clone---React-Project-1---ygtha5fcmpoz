@@ -180,7 +180,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
 
         {sign ? (
           <>
-            <Link to="/">
+            {/* <Link to="/">
               <Button
                 style={{
                   marginLeft: "40%",
@@ -195,39 +195,33 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
               >
                 Go to Home
               </Button>
-            </Link>
+            </Link> */}
           </>
         ) : (
           <>
-            <Input
+            {/* <Input
               type="checkbox"
               style={{ marginTop: "8%", marginLeft: "5%" }}
             />
             <label style={{ fontSize: "10px" }}>
                By proceeding you agree to our Terms of services & privacy policy
-            </label>
+            </label> */}
  
+            <div>
             <div
               style={{
                 cursor: "pointer",
                 color: "#318CE7",
                 fontSize: "18px",
+                // marginLeft:"0px",
               }}
-              // onMouseEnter={(e) => {
-              //   e.target.style.backgroundColor = "#fff";
-              //   e.target.style.border = "1px solid #000";
-              // }}
-              // onMouseLeave={(e) => {
-              //   e.target.style.backgroundColor = "#fff";
-              //   e.target.style.border = "1px solid #000";
-              // }}
+            
               onClick={handleLogin}
             >
               Create Account
-            </div>
-            <br />
+              </div>
 
-            <div
+              <div
               style={{
                 marginLeft: "25%",
                 marginTop: "15px",
@@ -240,6 +234,11 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
                 <span style={{ color: "black", fontSize:"15px"}}>Login</span>
               </Link>{" "}
             </div>
+
+            </div>
+            <br />
+
+            
           </>
         )}
       </form>
