@@ -1,14 +1,14 @@
 .my-page {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  padding: 20px;
+  padding: 25px;
   width: auto;
   border-radius: 5px;
 }
 
 .card {
   /* background-color: black; */
-  padding: 12%;
+  padding: 18%;
   width: 330px;
   height: 230px;
   border-radius: 5px;
