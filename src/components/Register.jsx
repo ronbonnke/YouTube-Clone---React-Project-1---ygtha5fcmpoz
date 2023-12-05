@@ -223,7 +223,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
 
               <div
               style={{
-                marginLeft: "25%",
+                // marginLeft: "25%",
                 marginTop: "15px",
                 color: "black",
                 marginBottom: "15px",

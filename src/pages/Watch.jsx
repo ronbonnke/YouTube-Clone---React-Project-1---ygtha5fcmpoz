@@ -40,30 +40,29 @@ function Watch() {
       }, [id]);
       
       return (
-        <div style={{ marginLeft: "0%", 
-        // width: "100%", 
-        display:"flex"}}>
-          <div>
+        <div style={{ marginLeft: "0.4%", display:"flex"}}>
 
-         
+          <div >
+
+
           {itemId.video_url ? (
             <>
               <Flex marginTop="0%" marginLeft="10px">
                 <div>
-
                 <video ref={videoRef}
                  width="100%" 
-                 height="100%" controls>
+                 height="100%"
+                 controls>
                   <source src={itemId.video_url} type="video/mp4" />
                 </video>
                 </div>
                 <div>
-                  {/* <SideVideos/> */}
+                  
                 </div>
               </Flex>
               <Flex
-                direction="row"  // Set direction to "row" to align items horizontally
-                alignItems="center" // Align items vertically to the center
+                direction="row"
+                alignItems="center" 
                 style={{ paddingLeft: "10px", width: "100%"  }}
               >
                 <h1 style={{ paddingTop: "20px", marginRight: "10px" }}>

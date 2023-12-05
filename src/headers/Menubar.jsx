@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Sidebar from "../Sidebar";
+import Sidebarsvg from "../Sidebarsvg";
 
 function Menubar() {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -15,6 +16,7 @@ function Menubar() {
     <div>
       <MenubarIcon onClick={handleToggleSidebar} />
       {isSidebarVisible && <Sidebar />}
+      {!isSidebarVisible && <Sidebarsvg /> }
     </div>
   );
 }

@@ -16,13 +16,6 @@ function Videos() {
         }
       />
 
-      <h1>ROMANCE 👄 </h1>
-      <Homepage
-        api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=romance"
-        }
-      />
-
       <h1>COMEDY 😂 </h1>
       <Homepage
         api={
@@ -41,6 +34,13 @@ function Videos() {
       <Homepage
         api={
           "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=drama"
+        }
+      />
+
+      <h1>ROMANCE 👄 </h1>
+      <Homepage
+        api={
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=romance"
         }
       />
 

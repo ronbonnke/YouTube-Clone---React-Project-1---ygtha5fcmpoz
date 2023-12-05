@@ -1,0 +1,13 @@
+.svg {
+  height: 100%;
+  position: fixed;
+  display: flex;
+  transition: 0.3s;
+  overflow-y: auto;
+  background-color: #fff;
+  flex-direction: column;
+  font-size: 60px;
+  top: 20;
+  width: 2%;
+  align-items: center;
+}
