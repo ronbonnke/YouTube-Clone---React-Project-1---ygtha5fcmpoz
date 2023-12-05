@@ -11,21 +11,21 @@ function Videos() {
       <h1>TRENDING 🔥</h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=suspense"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=16&keywords=suspense"
         }
       />
 
       <h1>ROMANCE 👄 </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=8&keywords=romance"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=romance"
         }
       />
 
       <h1>COMEDY 😂 </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=thriller"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=8&keywords=thriller"
         }
       />
 
@@ -45,13 +45,13 @@ function Videos() {
       <h1>MAGIC 🪄 </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=magic"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=16&keywords=magic"
         }
       />
       <h1>MYSTERY 👽 </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=16&keywords=mystery"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=mystery"
         }
       />
 
@@ -64,7 +64,7 @@ function Videos() {
       <h1>THRILLER ♨️ </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=20&keywords=thriller"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=24&keywords=thriller"
         }
       />
       <h1>HEROIC 💥 </h1>
@@ -77,13 +77,13 @@ function Videos() {
       <h1>BETRAYAL 💔 </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=16&keywords=betrayal"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=20&keywords=betrayal"
         }
       />
       <h1>SURVIVAL 🏊‍♂️ </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=8&keywords=survival"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=4&keywords=survival"
         }
       />
       <h1>JOURNEY 🪂 </h1>
@@ -95,7 +95,7 @@ function Videos() {
       <h1>SCI-FI 🔬 </h1>
       <Homepage
         api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=sci-fi"
+          "https://academics.newtonschool.co/api/v1/ott/show?limit=8&keywords=sci-fi"
         }
       />
       <h1>REVENGE 😈 </h1>

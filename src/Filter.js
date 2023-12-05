@@ -2,7 +2,6 @@ import React from "react";
 import "./Filter.css";
 import { Link } from "react-router-dom";
 
-
 function Filter() {
   return (
     <div className="filter d-flex align-items-center">
@@ -10,84 +9,100 @@ function Filter() {
         <span className="filter-items pointer active">All</span>
       </div> */}
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer ">Mixes</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer ">trending</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Music</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">drama</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">live</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">romance</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Cooking</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">comedy</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Gaming</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">drama</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Movies</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">action</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Comedy</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">magic</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Mototcycling</span>
-      </div></Link>
-     
-      <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Bodybuilding</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">mystery</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">News</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">fantasy</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Programming</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">thriller</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Live</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">heroic</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">JavaScript</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">betrayal</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">ReactJs</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">survival</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">ReactDom</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">journey</span>
+        </div>
+      </Link>
 
       <Link to={"/comingsoon"}>
-      <div className="single-filter">
-        <span className="filter-items pointer">Node</span>
-      </div></Link>
+        <div className="single-filter">
+          <span className="filter-items pointer">sci-fi</span>
+        </div>
+      </Link>
+
+      <Link to={"/comingsoon"}>
+        <div className="single-filter">
+          <span className="filter-items pointer">revenege</span>
+        </div>
+      </Link>
 
       <div className="single-filter">
         <svg
@@ -95,7 +110,7 @@ function Filter() {
           preserveAspectRatio="xMidYMid meet"
           focusable="false"
           class="style-scope yt-icon"
-          style={{"width":"20px"}}
+          style={{ width: "20px" }}
         >
           <g mirror-in-rtl="" class="style-scope yt-icon">
             <path
