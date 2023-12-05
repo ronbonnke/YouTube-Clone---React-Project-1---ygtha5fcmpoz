@@ -3,7 +3,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Videos from "./Videos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Page from "./pages/Page";
+import Page from "./pages/Homepage";
 import Watch from "./pages/Watch";
 import LoginSignup from "./components/LoginSignup";
 import Register from "./components/Register";

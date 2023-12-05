@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import './Page.css'
+import './Homepage.css'
 import axios from 'axios'; 
 import { Link } from 'react-router-dom';
-function Page() {
+function Homepage({api}) {
 
     const [videos, setVideos] = useState([]);
 
@@ -11,12 +11,12 @@ function Page() {
 
     useEffect(() => {
         
-        const apiUrl = 'https://academics.newtonschool.co/api/v1/ott/show?limit=100';
+        // const apiUrl = 'https://academics.newtonschool.co/api/v1/ott/show?limit=10';
         
     
         // Fetch data from your Axios instance
         axios
-        .get(apiUrl, { headers: { projectID: '01s6knzsacd8' } })
+        .get(api, { headers: { projectID: '01s6knzsacd8' } })
           .then((response) => {
             setVideos(response.data);
             setLoading(false);
@@ -55,5 +55,5 @@ function Page() {
       );
     }
 
-export default Page
+export default Homepage
 
