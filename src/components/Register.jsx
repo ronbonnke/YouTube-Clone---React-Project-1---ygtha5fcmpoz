@@ -3,6 +3,7 @@ import { Button, Container, Input } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { CloseIcon } from "@chakra-ui/icons";
+import "../styles/Register.css";
 
 const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
   const [error, setError] = useState("");
@@ -85,51 +86,38 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
     }
   };
   return (
-
+    <div
+      className="Register"
     
-
-    <Container
-      sx={{
-          bg: "white",
-          width: "25%",
-          left: "50%", // Centered horizontally
-          paddingTop:"30px",
-          top: "50%", // Centered vertically
-          position: "absolute",
-          borderRadius: "2%",
-          border: "1px solid lightgrey",
-          textAlign: "center",
-          transform: "translate(-50%, -50%)", // Centering trick
-      }}
     >
-      
-
-      <form style={{ border: "2px solid white", borderRadius: "10px", }}>
-      <div style={{ textAlign: "center" }}>
-      <img
+      <form
+        style={{
+          border: "2px solid white",
+          borderRadius: "10px",
+          width: "100%",
+        }}
+      >
+        <div style={{ textAlign: "center", justifyContent: "center" }}>
+          <img
             style={{ height: "70px", alignItems: "center" }}
             src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
             alt=""
-          /></div>
-        <h2 style={{ color: "#363636", paddingBottom:"20px", textAlign:"center", fontSize:"25px"}}>
+          />
+        </div>
+        <h2
+          style={{
+            color: "#363636",
+            paddingBottom: "20px",
+            textAlign: "center",
+            fontSize: "25px",
+          }}
+        >
           {" "}
           Sign in{" "}
         </h2>
 
-        <h4 style={{ color: "#666", marginLeft: "8%", marginRight: "5%" }}>
-         
-        </h4>
-
         <Input
-          style={{
-            marginLeft: "8%",
-            height: "40px",
-            width: "80%",
-            marginBottom: "5%",
-            borderRadius: "5px",
-            border: "2px solid #318CE7",
-            textAlign: "center",
-          }}
+          className="Inputbox"
           type="text"
           placeholder="Enter Your Name"
           value={username}
@@ -138,15 +126,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
         <br />
 
         <Input
-          style={{
-            marginLeft: "8%",
-            height: "40px",
-            width: "80%",
-            borderRadius: "5px",
-            border: "1px solid gray",
-            textAlign: "center",
-            border: "2px solid #318CE7",
-          }}
+          className="Inputbox"
           type="text"
           placeholder="Enter Your Email ID"
           value={email}
@@ -155,16 +135,7 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
         <br />
 
         <Input
-          style={{
-            marginLeft: "8%",
-            height: "40px",
-            width: "80%",
-            borderRadius: "5px",
-            border: "1px solid gray",
-            marginTop: "20px",
-            textAlign: "center",
-            border: "2px solid #318CE7",
-          }}
+          className="Inputbox"
           type="password"
           placeholder="Create a Password"
           value={password}
@@ -179,70 +150,62 @@ const Register = ({ setLoggedInStatus, setUserName, setEMail }) => {
         </div>
 
         {sign ? (
-          <>
-            {/* <Link to="/">
-              <Button
-                style={{
-                  marginLeft: "40%",
-                  backgroundColor: "purple",
-                  color: "White",
-                  marginTop: "40px",
-                  height: "40px",
-                  width: "100px",
-                  border: "2px solid purple",
-                  borderRadius: "8px",
-                }}
-              >
-                Go to Home
-              </Button>
-            </Link> */}
-          </>
+          <></>
         ) : (
           <>
-            {/* <Input
-              type="checkbox"
-              style={{ marginTop: "8%", marginLeft: "5%" }}
-            />
-            <label style={{ fontSize: "10px" }}>
-               By proceeding you agree to our Terms of services & privacy policy
-            </label> */}
- 
-            <div>
             <div
               style={{
-                cursor: "pointer",
-                color: "#318CE7",
-                fontSize: "18px",
-                // marginLeft:"0px",
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "35px",
               }}
-            
-              onClick={handleLogin}
             >
-              Create Account
+              <div
+                style={{
+                  textAlign: "center",
+
+                  // marginLeft: "25%",
+                  marginTop: "15px",
+                  marginLeft: "60px",
+                  
+                  // color: "black",
+                  // marginBottom: "15px",
+                }}
+              >
+                Already registered?{" "}
+                <Link to="/Login" style={{ textDecoration: "none" }}>
+                  <span style={{ color: "black", fontSize: "15px",
+                  fontWeight:"bolder", textAlign: "center"}}>
+                    Login
+                  </span>
+                </Link>{" "}
               </div>
 
               <div
-              style={{
-                // marginLeft: "25%",
-                marginTop: "15px",
-                color: "black",
-                marginBottom: "15px",
-              }}
-            >
-              Already registered?{" "}
-              <Link to="/Login" style={{ textDecoration: "none" }}>
-                <span style={{ color: "black", fontSize:"15px"}}>Login</span>
-              </Link>{" "}
+                style={{
+                  cursor: "pointer",
+                  color: "white",
+                  fontSize: "18px",
+                  fontWeight:"bolder",
+                  textAlign: "center",
+                  width: "75px",
+                  height: "40px",
+                  marginRight: "55px",
+                  borderRadius: "5px",
+                  background: "#318CE7",
+                  padding: "10px",
+                }}
+                onClick={handleLogin}
+              >
+                Next
+              </div>
             </div>
 
-            </div>
             <br />
-
-            
           </>
         )}
       </form>
-    </Container>
+    </div>
   );
 };
 export default Register;
