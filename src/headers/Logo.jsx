@@ -9,7 +9,7 @@ function Logo() {
               preserveAspectRatio="xMidYMid meet"
               focusable="false"
               class="style-scope yt-icon poinetr"
-              style={{ width: "75px", height: "40px", marginLeft:"40px", width: "120px", marginLeft: '20px'}}
+              style={{ width: "75px", height: "35px", marginLeft:"40px", width: "120px", marginLeft: '20px'}}
             >
               <g
                 viewBox="0 0 24 24"
