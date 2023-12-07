@@ -57,7 +57,7 @@ function Watchlistbutton() {
         }
       }
   return (
-    <div>
+    <div style={{marginRight:"0px"}}>
       <Button
             sx={{
               width: "40px",
@@ -66,7 +66,7 @@ function Watchlistbutton() {
               display: "flex",
               backgroundColor: "black",
               marginTop: "30px",
-              marginRight: "47px",
+              // marginRight: "47px",
               border: "none",
               fontSize: "4px",
               cursor: "pointer",

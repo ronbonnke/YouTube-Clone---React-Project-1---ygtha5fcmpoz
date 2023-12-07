@@ -1,22 +1,53 @@
 .flex1 {
-  direction: row;
-  align-items: center;
   padding: 10px;
-  /* width:100%; */
+
+  padding-top: 10px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex2 {
+  display: flex;
+
+  flex-direction: row;
+  margin-left: 0px;
+  justify-content: space-between;
+}
+
+.flex2 h1 {
+  font-size: 25px;
 }
 
 .side-video {
-  overflowy: auto;
-  overflowx: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100vh;
   /* width: isSidebarVisible ? 45% : 45%; */
 }
-
+.watch-button {
+  /* width: 100%; */
+  right: 0px;
+}
+.watchbutton {
+  display: none;
+}
 @media screen and (max-width: 320px) {
   .flex1 {
-    font-size: 16px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
   }
   .side-video {
     display: none;
+  }
+
+  .flex1 h1 {
+    font-size: 16px;
+  }
+
+  .flex1 h4 {
+    font-size: 5px;
+    flex-direction: column;
   }
 }

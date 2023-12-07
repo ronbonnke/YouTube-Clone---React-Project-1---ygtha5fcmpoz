@@ -79,30 +79,32 @@ function Watch() {
               // padding="10px"
               // width="100%"
             >
-              <h1 style={{ paddingTop: "20px", marginRight: "10px" }}>
+              <div className="flex2">
+                
+              
+              <h1 style={{ paddingTop: "25px"}}>
                 {itemId.title}
               </h1>
-              <Flex marginLeft="auto" alignItems="center">
-                <div
-                  style={{ display: "flex", alignItems: "center", margin: 0 }}
-                >
+              
+                <div className="watch-button">
                 
                   <Watchlistbutton
                     style={{
-                      paddingLeft: "20px",
+                    
                       width: "50%",
                       height: "25px",
-                      margin: 0,
+                      
                     }}
                   />
                 </div>
-              </Flex>
-            </Flex>
+                </div>
             <h4
-              style={{ marginLeft: "10px", paddingTop: "10px", width: "65%" }}
+              // style={{ marginLeft: "10px", paddingTop: "10px", width: "65%" }}
             >
               {itemId.description}
             </h4>
+             
+            </Flex>
           </>
         ) : (
           <p>Loading...</p>
