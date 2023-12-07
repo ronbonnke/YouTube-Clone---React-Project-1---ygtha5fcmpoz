@@ -1,0 +1,22 @@
+.flex1 {
+  direction: row;
+  align-items: center;
+  padding: 10px;
+  /* width:100%; */
+}
+
+.side-video {
+  overflowy: auto;
+  overflowx: hidden;
+  height: 100vh;
+  /* width: isSidebarVisible ? 45% : 45%; */
+}
+
+@media screen and (max-width: 320px) {
+  .flex1 {
+    font-size: 16px;
+  }
+  .side-video {
+    display: none;
+  }
+}

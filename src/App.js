@@ -14,36 +14,38 @@ import PremiumSub from "./pages/PremiumSub";
 import ComingSoon from "./pages/ComingSoon";
 import Password from "./pages/Password";
 import Watchlist from "./pages/Watchlist";
-
+import CurrentPlayingprovider from "./context/CurrentPlayingprovider";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
-        <div className="main-display">
-          <div className="container">
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Videos />
-                  </>
-                }
-              />
-              <Route path="/watch/:id" element={<Watch />} />
-              <Route path="/newpage" element={<Page />} />
-              <Route path="/login" element={<LoginSignup />} />
-              <Route path="/register" element={<Register />} />
-              {/* <Route path="/result/:id" element={<SearchResult />} /> */}
-              <Route path="/premium" element={<Premium />} />
-              <Route path="/premiumsub" element={<PremiumSub />} />
-              <Route path="/comingsoon" element={<ComingSoon />} />
-              <Route path="/password" element={<Password />} />
-              <Route path="/watchlist" element={<Watchlist />} />
-            </Routes>
+        <CurrentPlayingprovider>
+          <Header />
+          <div className="main-display">
+            <div className="container">
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Videos />
+                    </>
+                  }
+                />
+                <Route path="/watch/:id" element={<Watch />} />
+                <Route path="/newpage" element={<Page />} />
+                <Route path="/login" element={<LoginSignup />} />
+                <Route path="/register" element={<Register />} />
+                {/* <Route path="/result/:id" element={<SearchResult />} /> */}
+                <Route path="/premium" element={<Premium />} />
+                <Route path="/premiumsub" element={<PremiumSub />} />
+                <Route path="/comingsoon" element={<ComingSoon />} />
+                <Route path="/password" element={<Password />} />
+                <Route path="/watchlist" element={<Watchlist />} />
+              </Routes>
+            </div>
           </div>
-        </div>
+        </CurrentPlayingprovider>
       </BrowserRouter>
     </div>
   );

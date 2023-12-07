@@ -62,18 +62,18 @@ function Watchlistbutton() {
             sx={{
               width: "40px",
               height: "40px",
-              color: "white",
+              color: "black",
               display: "flex",
-              backgroundColor: "rgba(41, 37, 45, 0.6)",
+              backgroundColor: "black",
               marginTop: "30px",
-              marginLeft: "80px",
+              marginRight: "47px",
               border: "none",
               fontSize: "4px",
               cursor: "pointer",
               borderRadius: "8px",
               ":hover": {
-                backgroundColor: "#8230c6",
-                border: "2px solid #8230c6",
+                backgroundColor: "grey",
+                border: "3px solid darkgrey",
               },
             }}
             onClick={() => addRemoveWatchList(itemId._id)}
