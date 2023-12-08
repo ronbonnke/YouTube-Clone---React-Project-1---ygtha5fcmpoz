@@ -3,10 +3,22 @@ import axios from "axios";
 import "./Videos.css";
 import Filter from "./Filter";
 import Homepage from "./pages/Homepage";
+import { useCurrentplayingContext } from "./context/CurrentPlayingprovider";
 
 function Videos() {
+  const { isSidebarVisible } = useCurrentplayingContext();
   return (
-    <div className="videos">
+    // <div
+    // style={{
+    //   gridTemplateColumns: isSidebarVisible
+    //     ? "auto auto auto"
+    //     : "auto auto auto auto",
+    // }}
+    // >
+    <div
+      className="videos"
+      style={{ marginLeft: isSidebarVisible ? "11%" : "" }}
+    >
       <Filter />
 
       <h1>TRENDING 🔥</h1>
@@ -142,6 +154,7 @@ function Videos() {
       {/* {loading ? <p>Loading...</p> : <Page />}
       {loading ? <p>Loading...</p> : <Page />} */}
     </div>
+    // </div>
   );
 }
 

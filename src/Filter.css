@@ -1,28 +1,27 @@
 .filter {
-    flex: 1;
-    max-height: 40px;
-    margin: 0px 10px;
-    border-left: none;
-    border-right: none;
-    border: 2px  #9e9e9e4d;
-    width: 100%;
-    justify-content: space-between;
-    
+  flex: 1;
+  max-height: 40px;
+  margin: 0px 10px;
+  border-left: none;
+  border-right: none;
+  border: 2px #9e9e9e4d;
+  width: 100%;
+  justify-content: space-between;
 }
-span.filter-items{
-    font-size: 13px;
-    padding: 9px 11px;
-    border-radius: 30px;
-    border: 2px solid #9e9e9e5c;
-    margin: 0px 5px;
+span.filter-items {
+  font-size: 13px;
+  padding: 9px 11px;
+  border-radius: 30px;
+  border: 2px solid #9e9e9e5c;
+  margin: 0px 5px;
 }
 span.filter-items.active {
-    background-color: #000;
-    border: none;
-    margin: 0px 10px;
-    color: #fff;
+  background-color: #000;
+  border: none;
+  margin: 0px 10px;
+  color: #fff;
 }
 
-.single-filter{
-    cursor: pointer;
+.single-filter {
+  cursor: pointer;
 }

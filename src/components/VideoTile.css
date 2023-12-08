@@ -1,21 +1,19 @@
-.container-page{
+.container-page {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   padding: 10px;
   width: 100%;
   border-radius: 5px;
 }
 
-.container-card{
+.container-card {
   /* background-color: black; */
   padding: 20px;
   height: 10px;
 }
 
-.container-card > img{
+.container-card > img {
   height: 0px;
   width: 300px;
   border-radius: 5px;
-
 }
-  

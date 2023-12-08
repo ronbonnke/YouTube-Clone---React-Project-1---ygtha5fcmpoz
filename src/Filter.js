@@ -1,8 +1,10 @@
 import React from "react";
 import "./Filter.css";
 import { Link } from "react-router-dom";
+import { useCurrentplayingContext } from "./context/CurrentPlayingprovider";
 
 function Filter() {
+  const { isSidebarVisible } = useCurrentplayingContext();
   return (
     <div className="filter d-flex align-items-center">
       {/* <div className="single-filter">

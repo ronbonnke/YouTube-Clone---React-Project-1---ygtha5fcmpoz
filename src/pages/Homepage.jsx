@@ -4,9 +4,10 @@ import "./Homepage.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useCurrentplayingContext } from "../context/CurrentPlayingprovider";
-function Homepage({ api }) {
-  const { videos, setVideos,loading,setLoading } = useCurrentplayingContext();
 
+function Homepage({ api }) {
+  const { videos, setVideos, loading, setLoading, isSidebarVisible } =
+    useCurrentplayingContext();
 
   useEffect(() => {
     axios
@@ -23,7 +24,14 @@ function Homepage({ api }) {
   }, []);
 
   return (
-    <div className="my-page">
+    <div
+      className="my-page"
+      style={{
+        gridTemplateColumns: isSidebarVisible ? "auto auto auto" : "",
+        width: isSidebarVisible ? "90%" : "auto",
+       
+      }}
+    >
       {loading ? (
         <p>Loading...</p>
       ) : videos.data.length > 0 ? (

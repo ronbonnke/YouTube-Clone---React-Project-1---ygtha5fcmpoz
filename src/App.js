@@ -15,6 +15,7 @@ import ComingSoon from "./pages/ComingSoon";
 import Password from "./pages/Password";
 import Watchlist from "./pages/Watchlist";
 import CurrentPlayingprovider from "./context/CurrentPlayingprovider";
+
 function App() {
   return (
     <div className="App">
