@@ -113,7 +113,7 @@ function Watch() {
         style={{
           height: "100vh",
           width: isSidebarVisible ? "90%" : "45%",
-          marginRight:isSidebarVisible? "0px":"",
+          marginRight: isSidebarVisible? "2px":"",
         }}
       >
         <SideVideos />

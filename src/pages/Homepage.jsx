@@ -29,6 +29,7 @@ function Homepage({ api }) {
       style={{
         gridTemplateColumns: isSidebarVisible ? "auto auto auto" : "",
         width: isSidebarVisible ? "90%" : "auto",
+
        
       }}
     >
@@ -36,15 +37,33 @@ function Homepage({ api }) {
         <p>Loading...</p>
       ) : videos.data.length > 0 ? (
         videos.data.map((video) => (
-          <div className="card" key={video._id}>
+          <div className="card"
+          style={{
+            width: isSidebarVisible ? "400px" : "",
+            height: isSidebarVisible ? "600px" : "",   
+                
+          }}
+           key={video._id}>
             <Link to={`/watch/${video._id}`}>
               <img
                 src={video.thumbnail}
                 className="card-image"
+                style={{
+                  width: isSidebarVisible ? "95%" : "",
+                  height: isSidebarVisible ? "40%" : "",
+                  // marginRight: isSidebarVisible ? "0%" : "",
+                      
+                }}
                 alt={video.title}
               />
             </Link>
-            <div className="card-details">
+            <div className="card-details" 
+             style={{
+              width: isSidebarVisible ? "95%" : "",
+              height: isSidebarVisible ? "40%" : "",   
+                  
+            }}
+            >
               <h4>{video.title}</h4>
             </div>
           </div>
