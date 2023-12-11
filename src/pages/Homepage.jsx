@@ -41,7 +41,7 @@ function Homepage({ api }) {
           <div className="card"
           style={{
             width: isSidebarVisible ? "425px" : "",
-            height: isSidebarVisible ? "620px" : "",   
+            height: isSidebarVisible ? "300px" : "",   
                 
           }}
            key={video._id}>
@@ -51,7 +51,7 @@ function Homepage({ api }) {
                 className="card-image"
                 style={{
                   width: isSidebarVisible ? "95%" : "",
-                  height: isSidebarVisible ? "40%" : "",
+                  height: isSidebarVisible ? "100%" : "",
                   // marginRight: isSidebarVisible ? "0%" : "",
                       
                 }}
