@@ -5,7 +5,7 @@ import Sidebar from "../Sidebar";
 import Sidebarsvg from "../Sidebarsvg";
 import { useCurrentplayingContext } from "../context/CurrentPlayingprovider";
 function Menubar() {
-  // const [isSidebarVisible, setSidebarVisible] = useState(false);
+
  const {isSidebarVisible,setSidebarVisible} = useCurrentplayingContext();
 
   const handleToggleSidebar = () => {

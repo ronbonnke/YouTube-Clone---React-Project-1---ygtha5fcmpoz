@@ -9,9 +9,7 @@ function DropdownMenu({ profile }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear local storage or perform any other logout actions
     localStorage.clear();
-    // Redirect to the login page after logout
     navigate('/login');
   };
 

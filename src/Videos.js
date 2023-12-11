@@ -22,7 +22,7 @@ function Videos() {
       <Filter />
 
       <h1>TRENDING 🔥</h1>
-      <Homepage api={"/ott/show?limit=16&keywords=suspense"} />
+      <Homepage api={"/ott/show?limit=12&keywords=suspense"} />
 
       <h1>COMEDY 😂 </h1>
       <Homepage api={"/ott/show?limit=8&keywords=thriller"} />
@@ -37,9 +37,9 @@ function Videos() {
       <Homepage api={"/ott/show?limit=12&keywords=romance"} />
 
       <h1>ACTION ⚡</h1>
-      <Homepage api={"/ott/show?limit=8&keywords=action"} />
+      <Homepage api={"/ott/show?limit=9&keywords=action"} />
       <h1>MAGIC 🪄 </h1>
-      <Homepage api={"/ott/show?limit=16&keywords=magic"} />
+      <Homepage api={"/ott/show?limit=12&keywords=magic"} />
       <h1>MYSTERY 👽 </h1>
       <Homepage api={"/ott/show?limit=12&keywords=mystery"} />
 
@@ -51,13 +51,13 @@ function Videos() {
       <Homepage api={"/ott/show?limit=12&keywords=thriller"} />
 
       <h1>BETRAYAL 💔 </h1>
-      <Homepage api={"/ott/show?limit=20&keywords=betrayal"} />
+      <Homepage api={"/ott/show?limit=21&keywords=betrayal"} />
       <h1>SURVIVAL 🏊‍♂️ </h1>
-      <Homepage api={"/ott/show?limit=4&keywords=survival"} />
+      <Homepage api={"/ott/show?limit=6&keywords=survival"} />
       <h1>JOURNEY 🪂 </h1>
-      <Homepage api={"/ott/show?limit=12&keywords=journey"} />
+      <Homepage api={"/ott/show?limit=15&keywords=journey"} />
       <h1>SCI-FI 🔬 </h1>
-      <Homepage api={"/ott/show?limit=8&keywords=sci-fi"} />
+      <Homepage api={"/ott/show?limit=12&keywords=sci-fi"} />
       <h1>REVENGE 😈 </h1>
       <Homepage api={"/ott/show?limit=12&keywords=revenge"} />
       <h1>EPIC 👻 </h1>

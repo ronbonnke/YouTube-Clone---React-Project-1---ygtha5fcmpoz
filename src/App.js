@@ -7,9 +7,7 @@ import Page from "./pages/Homepage";
 import Watch from "./pages/Watch";
 import LoginSignup from "./components/LoginSignup";
 import Register from "./components/Register";
-import SearchResult from "./pages/SearchResult";
 import Premium from "./pages/Premium";
-// import Searchlist from './pages/Searchlist';
 import PremiumSub from "./pages/PremiumSub";
 import ComingSoon from "./pages/ComingSoon";
 import Password from "./pages/Password";
@@ -37,7 +35,6 @@ function App() {
                 <Route path="/newpage" element={<Page />} />
                 <Route path="/login" element={<LoginSignup />} />
                 <Route path="/register" element={<Register />} />
-                {/* <Route path="/result/:id" element={<SearchResult />} /> */}
                 <Route path="/premium" element={<Premium />} />
                 <Route path="/premiumsub" element={<PremiumSub />} />
                 <Route path="/comingsoon" element={<ComingSoon />} />

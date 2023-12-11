@@ -7,9 +7,6 @@ function Filter() {
   const { isSidebarVisible } = useCurrentplayingContext();
   return (
     <div className="filter d-flex align-items-center">
-      {/* <div className="single-filter">
-        <span className="filter-items pointer active">All</span>
-      </div> */}
       <Link to={"/comingsoon"}>
         <div className="single-filter">
           <span className="filter-items pointer ">trending</span>

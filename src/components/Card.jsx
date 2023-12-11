@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Flex } from "@chakra-ui/react";
-
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-// import ShareButton from "./ShareButton";
 
 const Card = ({ item }) => {
   const [smallerScreen, setSmallerScreen] = useState(window.innerWidth < 550);
