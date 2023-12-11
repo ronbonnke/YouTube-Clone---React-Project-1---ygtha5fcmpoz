@@ -4,14 +4,15 @@ import "./Homepage.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useCurrentplayingContext } from "../context/CurrentPlayingprovider";
+import {default as axiosInstance} from "../API/axios.js";
 
 function Homepage({ api }) {
   const { videos, setVideos, loading, setLoading, isSidebarVisible } =
     useCurrentplayingContext();
 
   useEffect(() => {
-    axios
-      .get(api, { headers: { projectID: "01s6knzsacd8" } })
+    axiosInstance
+      .get(api)
       .then((response) => {
         setVideos(response.data);
         setLoading(false);
@@ -39,8 +40,8 @@ function Homepage({ api }) {
         videos.data.map((video) => (
           <div className="card"
           style={{
-            width: isSidebarVisible ? "400px" : "",
-            height: isSidebarVisible ? "600px" : "",   
+            width: isSidebarVisible ? "425px" : "",
+            height: isSidebarVisible ? "620px" : "",   
                 
           }}
            key={video._id}>

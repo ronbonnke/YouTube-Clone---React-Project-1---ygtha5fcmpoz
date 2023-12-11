@@ -22,32 +22,16 @@ function Videos() {
       <Filter />
 
       <h1>TRENDING 🔥</h1>
-      <Homepage
-        api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=16&keywords=suspense"
-        }
-      />
+      <Homepage api={"/ott/show?limit=16&keywords=suspense"} />
 
       <h1>COMEDY 😂 </h1>
-      <Homepage
-        api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=8&keywords=thriller"
-        }
-      />
+      <Homepage api={"/ott/show?limit=8&keywords=thriller"} />
 
       <h1>LOVE 💑 </h1>
-      <Homepage
-        api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=love"
-        }
-      />
+      <Homepage api={"/ott/show?limit=12&keywords=love"} />
 
       <h1>DRAMA 🤡 </h1>
-      <Homepage
-        api={
-          "https://academics.newtonschool.co/api/v1/ott/show?limit=12&keywords=drama"
-        }
-      />
+      <Homepage api={"/ott/show?limit=12&keywords=drama"} />
 
       <h1>ROMANCE 👄 </h1>
       <Homepage
