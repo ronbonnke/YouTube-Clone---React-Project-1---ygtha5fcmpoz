@@ -60,11 +60,12 @@ function Watch() {
   return (
     <div
       style={{
-        width: isSidebarVisible ? "85%" : "100%",
+        // width: isSidebarVisible ? "" : "100%",
         height: "100%",
-        marginLeft: isSidebarVisible ? "11%" : "auto",
+        // marginLeft: isSidebarVisible ? "11%" : "auto",
         padding: "10px",
         display: "flex",
+        justifyContent: "space-between",
       }}
     >
       <div>
@@ -105,7 +106,8 @@ function Watch() {
         className="side-video"
         style={{
           height: "100vh",
-          width: isSidebarVisible ? "90%" : "45%",
+          // width: "700px",
+          width: isSidebarVisible ? "700px" : "45%",
           marginRight: isSidebarVisible? "2px":"",
         }}
       >

@@ -25,7 +25,7 @@ function SideVideos() {
       
      
   return (
-    <div style={{display:"flex",flexDirection:"column",marginLeft:"10px"}}>
+    <div style={{display:"flex",flexDirection:"column", alignItems: "flex-end"}}>
       {loading ? (
             <p>Loading...</p>
           ) : videos.data.length > 0 ? (
