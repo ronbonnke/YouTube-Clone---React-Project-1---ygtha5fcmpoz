@@ -9,7 +9,7 @@ function HomeIcon() {
       preserveAspectRatio="xMidYMid meet"
       focusable="false"
       class="style-scope yt-icon"
-      style={{ width: "20px", height: "20px", margin: "0px 20px" }}
+      style={{ width: "35px", height: "20px", }}
     >
       <g class="style-scope yt-icon">
         <path

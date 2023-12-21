@@ -70,8 +70,8 @@ function Watchlist() {
  
 
   return (
-    <div>
-    <h1>My WatchList</h1>
+    <div style={{width:"100%",textAlign:"center"}}>
+    <h1 >My WatchList</h1>
     <hr style={{ color: "white" }} />
     <Grid templateColumns="repeat(4, 1fr)" gap={4} width="80%" mx="auto">
       {watchlist.map((item) => (

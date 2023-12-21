@@ -1,0 +1,19 @@
+/* SidebarItem.css */
+
+.sidebar-items {
+  margin-left: 0;
+  font-weight: bold;
+  margin-left: 0px;
+}
+
+.sidebar-text {
+  margin-left: 15px;
+  font-weight: 20px;
+
+  /* Adjust the margin as needed */
+}
+
+/* Additional styling for the active state if required */
+.sidebar-items.active {
+  background-color: #fff; /* Change the background color for the active state */
+}

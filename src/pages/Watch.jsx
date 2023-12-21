@@ -60,9 +60,10 @@ function Watch() {
   return (
     <div
       style={{
-        // width: isSidebarVisible ? "" : "100%",
-        height: "100%",
+        width: isSidebarVisible ? "" : "100%",
         // marginLeft: isSidebarVisible ? "11%" : "auto",
+        height: "100%",
+        marginLeft: isSidebarVisible ? "11%" : "auto",
         padding: "10px",
         display: "flex",
         justifyContent: "space-between",
@@ -71,7 +72,14 @@ function Watch() {
       <div>
         {itemId.video_url ? (
           <>
-            <Flex marginTop="0%" marginLeft="auto">
+            <Flex 
+             style={{
+              marginLeft: isSidebarVisible ? "auto" : "20px",
+              // padding: "10px",
+              justifyContent: "space-between",
+              marginTop: "0%",
+            }}
+            >
               <div>
                 <video ref={videoRef} width="95%" height="100%" marginLeft="auto" controls>
                   <source src={itemId.video_url} type="video/mp4" />

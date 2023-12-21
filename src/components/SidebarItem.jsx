@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./SidebarItem.css"
 
 function SidebarItem({item}) {
   return (
@@ -8,7 +9,7 @@ function SidebarItem({item}) {
         <Link to={item.links}>
         
         <item.svg />
-        <span className="sidebar-text" style={{fontSize:"16px"}}>{item.name}</span>
+        <span className="sidebar-text">{item.name}</span>
         </Link>
       </div>
     </div>
