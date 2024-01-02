@@ -58,7 +58,7 @@ function Watch() {
   }, [id]);
 
   return (
-    <div
+    <div 
       style={{
         width: isSidebarVisible ? "" : "100%",
         // marginLeft: isSidebarVisible ? "11%" : "auto",

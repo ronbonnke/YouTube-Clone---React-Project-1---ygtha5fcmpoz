@@ -33,10 +33,12 @@
 }
 @media screen and (max-width: 320px) {
   .flex1 {
-    font-size: 25px;
+    font-size: 8px;
     display: flex;
+    width: 50%;
     flex-direction: column;
   }
+
   .side-video {
     display: none;
   }
